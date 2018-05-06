@@ -2,7 +2,7 @@
   "name": "app_interview-base",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "PORT=3000 ROOT_URL=https://localhost:3100/ meteor run --port 3000"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.42",

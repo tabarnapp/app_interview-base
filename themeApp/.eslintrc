@@ -1,0 +1,26 @@
+{
+    "parser": "babel-eslint",
+    "rules": {
+      "no-undef": 2,
+      "semi": 0,
+      "array-bracket-spacing": 0,
+      "no-plusplus": 0,
+      "no-unused-vars": 0
+    },
+    "globals": {
+      "request": true,
+      "tdebug": true,
+      "APP_ID": true,
+      "settings": true,
+      "_": true,
+      "window": true,
+      "XMLHttpRequest": true,
+      "Promise": true,
+      "console": true,
+      "require": true,
+      "clearInterval": true,
+      "setInterval": true,
+      "setTimeout": true,
+      "__filename": true
+    }
+  }
