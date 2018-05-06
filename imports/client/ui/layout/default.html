@@ -1,0 +1,35 @@
+<template name="layout_default">
+    {{#if ready}}
+    <header>
+        <h1>Tabarnapp Simple App</h1>      
+      <h2>Getting started</h2>
+    </header>
+    <section>
+      <div class="column">
+        <article>
+            <div class="card columns twelve">
+              <ol>
+                <li>Generate your private api keys (described <a href="https://help.shopify.com/api/getting-started/api-credentials#generate-private-api-credentials" target="_blank">here</a>). Make sure you select all possible permissions so you wan't have to come back and edit later.</li>
+                <li>Set your api keys in <code>/imports/server/api.js</code></li>
+                <li>Get accustomed with the libraries used: </li>
+                    <ul>
+                      <li><a hred="https://help.shopify.com/api/reference" target="_blank">Shopify API Docs</a> implemented with <a href="https://www.npmjs.com/package/shopify-api-node" target="_blank">shopify-api-node</a> npm package.</li>
+                      <li>
+                          <a href="https://www.uptowncss.com/" target="_blank">Uptown.css</a> (frontend library)
+                      </li>
+                    </ul>
+                  <li> <STRONG>DO NOT use</STRONG> autoform packages</li>
+                  <li>Use lodash rather than underscore</li>
+                  <li>If you bind a class to a javascript function always prepend <code>js-</code> to the class name and never attach any css to it. Look at the example button below for a demo.</li>
+                </ol>
+            </div>
+        </article>
+    </div>
+  </section>
+    <main class='wrapper'>
+      {{> Template.dynamic template=main}} 
+    </main>
+    {{else}}
+        Loading
+    {{/if}}
+  </template>

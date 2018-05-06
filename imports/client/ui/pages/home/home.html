@@ -1,0 +1,35 @@
+<template name='page_home'>
+    <section>
+        <article>
+            <div class="columns six card">
+                <p><button type='button' class='btn js-example-api-call'>Example api call: get 1 order</button></p>
+                <pre>{{#if api_result}}
+{{api_result}}
+{{/if}}</pre>
+            </div>
+            <div class="columns six secondary card">
+                <pre>
+//client code for the button
+Meteor.call("example-api-call",(error,result)=>{
+    console.log(result,error);
+    if (!error){
+        t.api_result.set(result);
+    }
+});
+
+
+//server code
+"example-api-call":function(){
+    return shopify.order.list({ limit: 1 })
+    .then(orders => {
+        return {success:orders};
+    })
+    .catch(err=>{
+        return {error:err};
+    });
+}
+                </pre>
+            </div>
+        </article>
+    </section>
+</template>
