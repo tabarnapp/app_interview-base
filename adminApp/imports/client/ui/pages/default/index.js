@@ -1,0 +1,1 @@
+import "./inside_template.js";

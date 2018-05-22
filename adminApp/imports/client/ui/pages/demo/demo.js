@@ -1,10 +1,10 @@
-import "./home.html";
+import "./demo.html";
 
-Template.page_home.onCreated(function(){
+Template.page_demo.onCreated(function(){
     this.api_result = new ReactiveVar(false);
 
 });
-Template.page_home.events({
+Template.page_demo.events({
     "click .js-example-api-call":function(e,t){
         Meteor.call("example-api-call",(error,result)=>{
             console.log(result,error);
@@ -17,7 +17,7 @@ Template.page_home.events({
     }
 })
 
-Template.page_home.helpers({
+Template.page_demo.helpers({
     "api_result":function(){
         const api_result =  Template.instance().api_result.get();
         if (api_result){

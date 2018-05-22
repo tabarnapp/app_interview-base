@@ -8,7 +8,7 @@ openssl req -x509 -out localhost.crt -keyout localhost.key \
 ```
 
 2. make sure you have webpack-cli intalled 
-3. add this line to you theme.liquid file inside shopify admin screen
+3. add this line to you theme.liquid file inside shopify admin screen if you didn't register a script tag from the api 
 ```
     {{ "https://localhost:3100/themeScripts/build/app_base_interview.js" | script_tag }}
 ```

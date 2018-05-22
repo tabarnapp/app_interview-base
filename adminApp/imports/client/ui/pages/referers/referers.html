@@ -1,0 +1,60 @@
+<template name="page_referers">
+	<header>
+	  <h1>Settings</h1>
+	  <h2>Referers</h2>
+	</header>
+	<section>
+	  <article>
+	    <div class="row columns twelve">
+	      <div class="columns has-sections card">
+	        <ul class="tabs">
+	          <li><a href="/settings">Dashboard</a></li>
+	          <li><a href="/orders">Orders</a></li>
+	          <li class="active"><a href="/referers">Referers</a></li>
+	        </ul>
+	        <div class="card-section">
+
+	          <div class="card overflow-container">
+	            <table class="results">
+	              <thead>
+	                <tr>
+	                  <th>Customer</th> 
+	               <!-- Note: Might not need Orders   <th>Orders</th> -->
+	                  <th>Revenue</th>
+	                  <th>Credits</th>
+	                  <th><a href="#" class="tip" data-hover="% your friends get as a discount">Give</a> / <a href="#" class="tip" data-hover="% of their purchases you get in store credits">Get</a></th>
+	                  <th>Action</th>
+	                </tr>
+	              </thead>
+	              <tbody>
+	                <tr>
+	                  <td><a href="/referers/detail/1" class="tip" data-hover="Voucher: 348ncsd84">Derek Morin</a></td>
+	                  <td>$199330</td>
+	                  <td>$1340</td>
+	                  <td>3% / 3%</td>
+	                  <td><button class="secondary">Edit</button></td>
+	                </tr>
+	                <tr>
+	                  <td><a href="/referers/detail/2" class="tip" data-hover="Voucher: 348ncsd84">Bogdan Radu</a></td>
+	                  <td>$4034</td>
+	                  <td>$134</td>
+	                  <td>3% / 3%</td>
+	                  <td><button class="secondary">Edit</button></td>
+	                </tr>
+	              </tbody>
+	            </table>
+
+	          </div>
+	        
+				<div class="pagination">
+			    <span class="button-group">
+			      <button class="secondary icon-prev"></button>
+			      <button class="secondary icon-next"></button>
+			    </span>
+			  </div>
+	        </div>
+	      </div>
+	    </div>
+	  </article>
+	</section>
+</template>
