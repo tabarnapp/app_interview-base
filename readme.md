@@ -8,14 +8,10 @@ openssl req -x509 -out localhost.crt -keyout localhost.key \
 ```
 
 2. make sure you have webpack-cli intalled 
-3. add this line to you theme.liquid file inside shopify admin screen if you didn't register a script tag from the api 
-```
-    {{ "https://localhost:3100/themeScripts/build/app_base_interview.js" | script_tag }}
-```
-4. make sure you have tmux installed
-5. go to adminApp and run `meteor npm i`
-6. go to themeApp and run `npm i` 
-7. start the project with `./start.sh`. It will open 2 tabs one for the meteor app, one for the themeApp. You can switch between tabs by pressing ctrl+b 1 and ctrl+b 2
+3. make sure you have tmux installed
+4. go to adminApp and run `meteor npm i`
+5. go to themeApp and run `npm i` 
+6. start the project with `./start.sh`. It will open 2 tabs one for the meteor app, one for the themeApp. You can switch between tabs by pressing ctrl+b 1 and ctrl+b 2
 
 
 

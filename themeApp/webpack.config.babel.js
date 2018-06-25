@@ -16,9 +16,13 @@ module.exports = {
   },
   resolve: {
     modules: [
-      "node_modules"
+      path.resolve(__dirname, "node_modules"),
     ],
     extensions: [".js", ".json", ".jsx", ".css"],
+    alias: {
+      CommonLib: path.resolve(__dirname, './CommonLib/'),
+      CONSTANTS: path.resolve(__dirname,"./CommonConstants"),
+    },
   },
 
   module: {
@@ -35,7 +39,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['es2015']
+            presets: ['babel-preset-es2015'].map(require.resolve),
           }
         },
       },
@@ -45,7 +49,7 @@ module.exports = {
         use: [{
           loader: 'babel-loader',
           options: {
-            presets: ['es2015']
+            presets: ['babel-preset-es2015'].map(require.resolve),
           }
         }, {
           loader: "eslint-loader",
@@ -54,31 +58,23 @@ module.exports = {
           }
         }],
       },
-      {
-        test: /\.jsx$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          presets: ['es2015', 'react']
-        }
-      }
     ]
   },
   devtool: 'source-map',
   node: {
     console: true,
   },
-//   externals: {
-//     _: '_',
-//   },
+  externals: {
+    _: '_',
+  },
+
   performance: { hints: false },
   plugins: [
     new webpack.DefinePlugin({
-      'APP_ID': JSON.stringify("app_interview")
+      'APP_ID': JSON.stringify("AW") //APP_WARDEN
     }),
     new webpack.ProvidePlugin({
-    //   tdebug: 'debug',
-      '_':'lodash',
+      tdebug: 'debug',
       'request': 'xhr-request',
     }),
     new webpack.NoEmitOnErrorsPlugin(),

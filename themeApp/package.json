@@ -1,5 +1,6 @@
 {
     "dependencies": {
+        "lockr": "^0.8.4",
         "lodash": "^4.17.10",
         "xhr-request": "^1.1.0"
     },
